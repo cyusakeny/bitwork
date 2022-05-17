@@ -1,0 +1,55 @@
+body {
+  background-color: black;
+  position: relative;
+  margin-top: 40px;
+}
+img {
+  position: absolute;
+  top: -110px;
+  right: 0px;
+  border: none;
+}
+.description {
+  color: white;
+  width: 70%;
+  text-align: justify;
+  font-size: 14.8px;
+}
+.name {
+  color: black;
+  text-align: justify;
+  background-color: white;
+  width: auto;
+  font-size: 15px;
+  max-width: 25%;
+  padding-left: 12px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  overflow: hidden;
+}
+h1 {
+  color: white;
+  text-align: justify;
+}
+.content {
+  width: 60%;
+  margin-left: 64px;
+  position: relative;
+  margin-top: 17%;
+}
+button {
+  margin-top: 6px;
+  width: 15%;
+  height: 11%;
+  background-color: transparent;
+  border: white 0.6px solid;
+  color: white;
+}
+.logout {
+  position: absolute;
+  left: 0px;
+}
+.login {
+  position: absolute;
+  left: 140px;
+}
