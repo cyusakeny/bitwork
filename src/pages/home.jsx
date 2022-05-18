@@ -12,11 +12,21 @@ const Home = () => {
     if (windowFocused) {
       setStatus("Active");
     }
+    const fetchData = async () => {
+      const people = await localStorage.getItem("users").split(",").slice();
+      const index = people.indexOf(sessionStorage.getItem("user"));
+      if (index === -1) {
+        sessionStorage.removeItem("user");
+        navigate("/");
+      }
+    };
+    fetchData();
+
     window.addEventListener("storage", () => {
       const people = localStorage.getItem("users").split(",").slice();
       setUsers(people);
     });
-  }, [users, windowFocused]);
+  }, [users, windowFocused, navigate]);
 
   const logout = (user) => {
     const elements = localStorage.getItem("users").split(",").slice();
